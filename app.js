@@ -48,7 +48,16 @@ const getPost = (id) => {
   };
   getPost(1);
   getPost(50);
-
+// *******************************************************************
+const getPostAsync = (data) => {
+    app.get('/id1',async(req,res)=>{
+     console.log("git successfully")
+     const response=await axios.get(`https://jsonplaceholder.typicode.com/posts/${data}`)
+    
+res.json(response.data)
+    });
+  };
+  getPostAsync(1);
 
 
 
